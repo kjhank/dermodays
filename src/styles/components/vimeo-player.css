@@ -1,0 +1,47 @@
+vimeo-player {
+  cursor: pointer;
+
+  position: relative;
+
+  aspect-ratio: var(--inline-size, 720) / var(--block-size, 1280);
+
+  background-image: var(--poster);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transition: outline-offset 0.3s;
+
+  iframe {
+    pointer-events: none;
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+
+  .play {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+
+    aspect-ratio: 1;
+    inline-size: 42.5%;
+
+    transition: scale var(--t-fast), opacity var(--t-fast);
+
+    svg {
+      inline-size: 100%;
+      block-size: 100%;
+    }
+
+    &.hidden {
+      scale: 0;
+      opacity: 0;
+    }
+  }
+
+  &:focus {
+    outline: 3px solid var(--c-accent);
+    outline-offset: min(0.9375vw, 3px);
+  }
+}

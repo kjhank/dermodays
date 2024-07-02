@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: clip;
+  font-family: var(--f-body);
+
+  & :focus {
+    outline-color: var(--c-accent);
+  }
+}

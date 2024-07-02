@@ -1,0 +1,29 @@
+promo-carousel {
+  --padding-inline: min(5.625vw, 18px);
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-block-end: min(2.8125vw, 15px);
+
+  ul {
+    scroll-padding-inline: var(--padding-inline);
+    scroll-snap-type: x proximity;
+
+    overflow-x: auto;
+    display: flex;
+    gap: min(2.8125vw, 15px);
+
+    padding-block: 20px;
+    padding-inline: var(--padding-inline);
+  }
+
+  > .widget {
+    align-self: center;
+    padding-inline: min(10.3125vw, 33px);
+
+    @media (width > 800px) {
+      padding-inline: min(17.7vw, 230px);
+    }
+  }
+}

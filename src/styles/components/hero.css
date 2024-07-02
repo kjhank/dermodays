@@ -1,0 +1,30 @@
+.hero {
+  picture {
+    aspect-ratio: 320/266;
+    inline-size: min(100%, 2081px);
+    margin-inline: auto;
+
+    img {
+      inline-size: 100%;
+    }
+
+    @media (width > 800px) {
+      aspect-ratio: 3.485;
+    }
+  }
+
+  .widget {
+    padding-inline: min(5.625vw, 18px);
+    line-height: 2.375;
+
+    &.highlight {
+      scale: 1.2;
+      margin-inline: 2ex;
+      background-color: var(--c-footer-bg-even);
+    }
+
+    @media (width > 800px) {
+      padding-inline: min(1.1vw, 14.3px);
+    }
+  }
+}

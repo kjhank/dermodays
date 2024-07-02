@@ -1,0 +1,20 @@
+.widget {
+  display: inline-block;
+
+  font: inherit;
+  font-size: var(--f-widget);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: var(--c-accent);
+  border-radius: 100vmax;
+
+  transition: outline-offset 0.3s;
+
+  &:focus {
+    outline-color: var(--c-accent);
+    outline-offset: min(0.9375vw, 3px);
+  }
+}

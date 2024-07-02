@@ -1,0 +1,19 @@
+.layout {
+  --gap: calc(45vw - 625px);
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  > *:not(.layout-full) {
+    grid-column: 2;
+  }
+
+  > .layout-full {
+    grid-column: span 3;
+  }
+
+  @media (width > 800px) {
+    grid-template-columns: 1fr min(90vw, 1250px) 1fr;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,22 @@
+.entire-offer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  aspect-ratio: 321/305;
+  margin-block-start: min(15.625vw, 50px);
+  padding-block: min(7vw, 56px);
+
+  background-image: url('/entire-offer.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .widget {
+    padding-inline: min(17vw, 136px);
+  }
+
+  @media (width > 800px) {
+    aspect-ratio: 1.941;
+    background-image: url('/desktop/entire-offer.webp');
+  }
+}
