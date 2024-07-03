@@ -7,6 +7,7 @@ promo-carousel {
   margin-block-end: min(2.8125vw, 15px);
 
   ul {
+    scrollbar-width: none;
     scroll-padding-inline: var(--padding-inline);
     scroll-snap-type: x proximity;
 
@@ -14,8 +15,14 @@ promo-carousel {
     display: flex;
     gap: min(2.8125vw, 15px);
 
+    inline-size: calc(100% - 2 * var(--scroll-button-inline-size));
     padding-block: 20px;
     padding-inline: var(--padding-inline);
+
+    /* @media (width > 800px) {
+      inline-size: calc(100% - 2 * var(--scroll-button-inline-size));
+
+    } */
   }
 
   > .widget {

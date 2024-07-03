@@ -7,6 +7,8 @@
   margin-block-start: min(15.625vw, 50px);
   padding-block: min(7vw, 56px);
 
+  text-decoration: none;
+
   background-image: url('/entire-offer.webp');
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,6 +1,11 @@
+.logos-wrapper {
+  padding-block-end: min(22.5vw, 72px)
+}
+
 .logos-list {
   --padding-inline: min(5.625vw, 18px);
 
+  scrollbar-width: none;
   scroll-snap-type: x proximity;
 
   overflow-x: auto;
@@ -8,8 +13,10 @@
   gap: min(7.5vw, 24px);
   align-items: center;
 
-  margin-block: min(7.8125vw, 25px) min(22.5vw, 72px);
-  padding-block: min(7.8125vw, 25px) min(22.5vw, 72px);
+  inline-size: calc(100% - 2* var(--scroll-button-inline-size));
+
+  /* margin-block: min(7.8125vw, 25px) min(22.5vw, 72px); */
+  padding-block: min(7.8125vw, 25px);
   padding-inline: var(--padding-inline);
 
   list-style: none;

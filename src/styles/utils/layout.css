@@ -15,5 +15,9 @@
   @media (width > 800px) {
     grid-template-columns: 1fr min(90vw, 1250px) 1fr;
     margin-inline: auto;
+
+    &:is(main) {
+      margin-block-start: min(4.7vw, 61px);
+    }
   }
 }

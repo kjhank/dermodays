@@ -1,4 +1,5 @@
 .opportunities {
+  isolation: isolate;
   position: relative;
 
   display: none;
@@ -20,6 +21,7 @@
 
   .heading {
     margin-block-end: min(7.86vw, 102px);
+    padding-inline-start: min(4.16vw, 54px);
     font-size: var(--f-xxl);
     color: #f47920;
     text-transform: uppercase;

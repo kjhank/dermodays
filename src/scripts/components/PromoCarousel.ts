@@ -49,21 +49,25 @@ export class PromoCarousel extends HTMLElement {
     }
 
     this.innerHTML = `
-    <ul>
-      ${products.map((product) => `
-        <promo-item
-          add_to_cart_url="${product.add_to_cart_url}"
-          brand="${product.brand}"
-          image="${product.images['220x220'].url}"
-          own_brand="${product.own_brand}"
-          price="${product.price}"
-          productId="${product.id}"
-          productName="${product.name}"
-          type="${product.type}"
-          url="${product.url}"
-        ></promo-item>`).join('')}
-        </ul>
-        <a class="dermodays-widget" href="${this.promos.url}">Zobacz więcej</a>
+    <div class="dermodays-carousel-wrapper">
+      <scroll-button direction="start"></scroll-button>
+      <ul>
+        ${products.map((product) => `
+          <promo-item
+            add_to_cart_url="${product.add_to_cart_url}"
+            brand="${product.brand}"
+            image="${product.images['220x220'].url}"
+            own_brand="${product.own_brand}"
+            price="${product.price}"
+            productId="${product.id}"
+            productName="${product.name}"
+            type="${product.type}"
+            url="${product.url}"
+          ></promo-item>`).join('')}
+      </ul>
+      <scroll-button direction="end"></scroll-button>
+    </div>
+    <a class="dermodays-widget" href="${this.promos.url}">Zobacz więcej</a>
     `;
   }
 }

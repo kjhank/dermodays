@@ -42,13 +42,14 @@ export class PromoItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <p class="dermodays-brow">dermo days</p>
+    <a href="${this.url}">
       <figure class="dermodays-image">
         <picture>
           <img src="${this.image}" alt="${this.productName}" width="220" height="220" />
         </picture>
         <figcaption class="dermodays-name">${this.productName}</figcaption>
       </figure>
-      <p class="dermodays-price">${this.price}</p>`;
+      <p class="dermodays-price">${this.price}</p>
+    </a>`;
   }
 }

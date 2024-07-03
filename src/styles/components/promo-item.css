@@ -3,8 +3,6 @@ promo-item {
 
   position: relative;
 
-  display: flex;
-  flex-direction: column;
   flex-shrink: 0;
 
   inline-size: min(37.1875vw, 298px);
@@ -13,60 +11,61 @@ promo-item {
   text-align: center;
   list-style: none;
 
-  > * {
+  > a {
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
-  }
+    text-decoration: none;
 
-  .brow {
-    position: absolute;
-    inset: 0 auto auto 1px;
-    translate: 0 -50%;
+/*
+    > * {
+      flex-shrink: 0;
+    } */
 
-    padding-inline: 0.5em;
+    .name {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
 
-    font-size: var(--f-s);
-    color: var(--c-alt);
-    text-transform: uppercase;
+      margin-block: min(4.6875vw, 15px);
 
-    background-color: var(--c-bg);
-  }
+      font-size: var(--f-m);
+      line-height: 1.2;
+      hyphens: auto;
+      overflow-wrap: break-word;
 
-  .name {
-    margin-block: min(4.6875vw, 15px);
+      -webkit-line-clamp: 2;
 
-    font-size: var(--f-m);
-    line-height: 1.2;
-    hyphens: auto;
-    overflow-wrap: break-word;
-  }
+    }
 
-  .price {
-    margin-block-start: auto;
+    .price {
+      margin-block-start: auto;
 
-    font-size: var(--f-s);
-    color: var(--c-accent);
-
-    border: 2px solid var(--c-accent);
-    border-radius: 50vmax;
-  }
-
-  .image {
-    inline-size: 100%;
-
-    picture {
-      display: grid;
-      place-items: center;
-
-      aspect-ratio: 1;
-      inline-size: 100%;
-      padding: 5.4%;
+      font-size: var(--f-s);
+      color: var(--c-accent);
 
       border: 2px solid var(--c-accent);
-      border-radius: min(4.6875vw, 15px);
+      border-radius: 50vmax;
     }
-  }
 
-  @media (width > 800px) {
-    inline-size: min(15.92vw, 207px);
+    .image {
+      inline-size: 100%;
+
+      picture {
+        display: grid;
+        place-items: center;
+
+        aspect-ratio: 1;
+        inline-size: 100%;
+        padding: 5.4%;
+
+        border: 2px solid var(--c-accent);
+        border-radius: min(4.6875vw, 15px);
+      }
+    }
+
+    @media (width > 800px) {
+      inline-size: min(15.92vw, 207px);
+    }
   }
 }

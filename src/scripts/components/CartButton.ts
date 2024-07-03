@@ -7,7 +7,6 @@ export class CartButton extends HTMLElement {
     return this.getAttribute('url');
   }
 
-  // p161805-Reme_Kolagenowa_Formula_Piekna_pomarancza_-_marakuja_proszek_150_g
   parseUrl() {
     if (!this.url) return {};
 

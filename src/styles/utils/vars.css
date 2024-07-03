@@ -19,9 +19,12 @@
   --c-footer-bg-odd: oklch(81% 0.11 56.92deg);
   --c-footer-fg-odd: oklch(32% 0.11 262.51deg);
   --c-header-bg: oklch(90.27% 0.047 64.06deg);
+  --c-shadow: oklch(0% 0 0deg / 25%);
 
   --t-fast: 200ms;
   --t-slow: 400ms;
+
+  --scroll-button-inline-size: min(10vw, 32px);
 
   @media (width > 800px) {
     /* 18, 20, 23, 65 */
@@ -36,5 +39,7 @@
 
     --f-footer-link: var(--f-xl);
     --f-widget: var(--f-l);
+
+    --scroll-button-inline-size: min(2.46vw, 32px);
   }
 }

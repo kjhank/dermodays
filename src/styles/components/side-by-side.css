@@ -5,55 +5,7 @@
   display: grid;
   grid-template-columns: var(--gap) 1fr var(--gap);
 
-  .heading {
-    grid-column: 1/-1;
-
-    picture {
-      inline-size: min(100%, 100vw);
-
-      img {
-        inline-size: 100%;
-      }
-    }
-
-    @media (width > 800px) {
-      /* grid-column: span 2; */
-      margin-block: min(5.62vw, 73px);
-    }
-  }
-
-  vimeo-player {
-    grid-column: 2;
-    margin-block: min(6.875vw, 22px);
-
-    @media (width > 800px) {
-      grid-column: unset;
-      margin-block: unset;
-    }
-  }
-
-  promo-carousel {
-    grid-column: 1/-1;
-    margin-block-start: min(8.85vw, 115px);
-
-    @media (width > 800px) {
-      /* grid-column: ; */
-    }
-  }
-
-  :not(promo-carousel) .widget {
-    padding-inline: min(12.5vw, 100px);
-    line-height: 1.6875;
-
-    @media (width > 800px) {
-      margin-block-start: min(2.77vw, 36px);
-      padding-inline: min(4vw, 52px);
-      font-size: var(--f-m);
-      line-height: 2.5;
-    }
-  }
-
-  .product {
+  doz-product {
     display: flex;
     grid-column: 2;
     flex-direction: column;
@@ -95,16 +47,24 @@
     &.vascular {
       --inline-size: min(37.8125vw, 121px);
 
-      @media (width > 800px)  {
+      @media (width > 800px) {
         --inline-size: min(10.62vw, 138px);
       }
     }
 
     picture {
-      inline-size: var(--inline-size, 50%);
+      inline-size: auto;
+      block-size: 60vw;
       margin-block-start: min(10.3125vw, 33px);
 
+      > img {
+        inline-size: auto;
+        block-size: 100%;
+      }
+
       @media (width > 800px) {
+        inline-size: var(--inline-size, 50%);
+        block-size: auto;
         margin-block-start: unset;
       }
     }
@@ -119,7 +79,7 @@
       white-space: pre-line;
 
       @media (width > 800px) {
-        inline-size: auto;
+        inline-size: min(70%, 800px);
         font-size: var(--f-l);
       }
     }
@@ -132,6 +92,54 @@
       gap: min(0.9625vw, 13px);
     }
   }
+
+  .heading {
+    grid-column: 1/-1;
+
+    picture {
+      inline-size: min(100%, 100vw);
+
+      img {
+        inline-size: 100%;
+      }
+    }
+
+    @media (width > 800px) {
+      margin-block: min(5.62vw, 73px);
+    }
+  }
+
+  vimeo-player {
+    grid-column: 2;
+    margin-block: min(6.875vw, 22px);
+
+    @media (width > 800px) {
+      grid-column: unset;
+      margin-block: unset;
+    }
+  }
+
+  promo-carousel {
+    grid-column: 1/-1;
+    margin-block-start: min(8.85vw, 115px);
+
+    @media (width > 800px) {
+      /* grid-column: ; */
+    }
+  }
+
+  :not(promo-carousel) .widget {
+    padding-inline: min(12.5vw, 100px);
+    line-height: 1.6875;
+
+    @media (width > 800px) {
+      margin-block-start: min(2.77vw, 36px);
+      padding-inline: min(4vw, 52px);
+      font-size: var(--f-m);
+      line-height: 2.5;
+    }
+  }
+
 
   .footer-link {
     --b-radius: min(6.25vw, 20px);
@@ -225,7 +233,7 @@
     @media (width > 800px) {
       grid-template-columns: auto 34%;
 
-      .product {
+      doz-product {
         grid-column: 1;
         grid-row: 2;
         margin-inline: 0 min(9.62vw, 125px);
@@ -259,7 +267,7 @@
     @media (width > 800px) {
       grid-template-columns: 34% auto;
 
-      .product {
+      doz-product {
         /* grid-column: 2;
         grid-row: 2; */
         margin-inline: min(9.62vw, 125px) 0;

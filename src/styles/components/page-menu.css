@@ -1,0 +1,40 @@
+.page-menu {
+  position: sticky;
+  z-index: 1;
+  inset: 0 0 auto;
+
+  margin-block-start: min(10.3125vw, 33px);
+
+  background-color: var(--c-alt);
+
+  > .carousel-wrapper {
+    grid-column: span 3;
+
+    @media (width > 800px) {
+      grid-column: 2;
+    }
+  }
+
+  .category-anchors {
+    inline-size: calc(100% - 2* var(--scroll-button-inline-size));
+
+    /* @media (width > 800px) {
+      inline-size: 100%;
+    } */
+  }
+
+  .widget {
+    padding-inline: min(5.625vw, 18px);
+    line-height: 2.375;
+
+    &.highlight {
+      scale: 1.2;
+      margin-inline: 2ex;
+      background-color: var(--c-footer-bg-even);
+    }
+
+    @media (width > 800px) {
+      padding-inline: min(1.1vw, 14.3px);
+    }
+  }
+}

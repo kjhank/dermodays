@@ -1,0 +1,40 @@
+scroll-button {
+  cursor: pointer;
+
+  inline-size: var(--scroll-button-inline-size);
+  block-size: var(--scroll-button-inline-size);
+
+  line-height: 1;
+  color: var(--c-accent);
+
+  background-color: var(--c-alt);
+  border-radius: 50vmax;
+  box-shadow: 2px 2px 4px var(--c-shadow);
+
+  transition: outline-offset var(--t-fast);
+
+
+
+  &:focus {
+    outline-color: var(--c-accent);
+    outline-offset: min(0.9375vw, 3px);
+  }
+
+  chevron-svg {
+    display: grid;
+    place-items: center;
+    inline-size: 100%;
+    block-size: 100%;
+
+    svg {
+      inline-size: 60%;
+      block-size: 60%;
+    }
+  }
+
+  &[direction="start"] {
+    chevron-svg {
+      rotate: 180deg;
+    }
+  }
+}
