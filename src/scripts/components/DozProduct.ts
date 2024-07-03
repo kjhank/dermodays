@@ -6,7 +6,7 @@ export class DozProduct extends HTMLElement {
     name: string;
     price: string;
     price_value: number;
-    price_lowest: number;
+    price_lowest: string;
     url: string;
     add_to_cart_url: string;
     brand: string;
