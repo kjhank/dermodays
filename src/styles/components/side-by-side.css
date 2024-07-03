@@ -6,97 +6,7 @@
   grid-template-columns: var(--gap) 1fr var(--gap);
 
   doz-product {
-    display: flex;
     grid-column: 2;
-    flex-direction: column;
-    gap: min(4.0625vw, 13px);
-    align-items: center;
-
-    &.hydration {
-      --inline-size: min(50.3125vw, 654px);
-
-      @media (width > 800px) {
-        --inline-size: min(21.23vw, 276px);
-      }
-    }
-
-    &.care {
-      --inline-size: min(50.9375vw, 407.5px);
-
-      @media (width > 800px) {
-        --inline-size: min(36.62vw, 476px);
-      }
-    }
-
-    &.acne {
-      --inline-size: min(74.375vw, 595px);
-
-      @media (width > 800px) {
-        --inline-size: min(32.46vw, 422px)
-      }
-    }
-
-    &.hair {
-      --inline-size: min(39.6875vw, 317px);
-
-      @media (width > 800px) {
-        --inline-size: min(13.4vw, 174px);
-      }
-    }
-
-    &.vascular {
-      --inline-size: min(37.8125vw, 121px);
-
-      @media (width > 800px) {
-        --inline-size: min(10.62vw, 138px);
-      }
-    }
-
-    picture {
-      inline-size: auto;
-      block-size: 60vw;
-      margin-block-start: min(10.3125vw, 33px);
-
-      > img {
-        inline-size: auto;
-        block-size: 100%;
-      }
-
-      @media (width > 800px) {
-        inline-size: var(--inline-size, 50%);
-        block-size: auto;
-        margin-block-start: unset;
-      }
-    }
-
-    .price {
-      font-size: var(--f-m);
-      font-weight: bold;
-      color: var(--c-footer-fg-odd);
-    }
-
-    .description {
-      inline-size: min(204px, 63.75vw);
-
-      font-size: var(--f-s);
-      font-weight: 700;
-      line-height: 1.2;
-      text-align: center;
-      white-space: pre-line;
-
-      @media (width > 800px) {
-        inline-size: min(70%, 800px);
-        font-size: var(--f-l);
-      }
-    }
-
-    .widget {
-      margin-block-start: min(3.125vw, 10px);
-    }
-
-    @media (width > 800px) {
-      gap: min(0.9625vw, 13px);
-    }
   }
 
   .heading {
@@ -111,7 +21,9 @@
     }
 
     @media (width > 800px) {
-      margin-block: min(5.62vw, 73px);
+      &:is(:not(a)) {
+        margin-block: min(5.62vw, 73px);
+      }
     }
   }
 
@@ -274,8 +186,6 @@
       grid-template-columns: 34% auto;
 
       doz-product {
-        /* grid-column: 2;
-        grid-row: 2; */
         margin-inline: min(9.62vw, 125px) 0;
       }
     }
