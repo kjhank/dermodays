@@ -18,18 +18,15 @@ promo-carousel {
     inline-size: calc(100% - 2 * var(--scroll-button-inline-size));
     padding-block: 20px;
     padding-inline: var(--padding-inline);
-
-    /* @media (width > 800px) {
-      inline-size: calc(100% - 2 * var(--scroll-button-inline-size));
-
-    } */
   }
 
   > .widget {
     align-self: center;
     padding-inline: min(10.3125vw, 33px);
+    line-height: 2;
 
     @media (width > 800px) {
+      margin-block-start: min(4.3vw, 56px);
       padding-inline: min(17.7vw, 230px);
     }
   }

@@ -20,5 +20,11 @@
   @media (width > 800px) {
     aspect-ratio: 1.941;
     background-image: url('/desktop/entire-offer.webp');
+
+    .widget {
+      inline-size: min(24.46vw, 318px);
+      padding-inline: 0;
+      text-align: center;
+    }
   }
 }
