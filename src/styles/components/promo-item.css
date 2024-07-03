@@ -17,11 +17,6 @@ promo-item {
     flex-shrink: 0;
     text-decoration: none;
 
-/*
-    > * {
-      flex-shrink: 0;
-    } */
-
     .name {
       overflow: hidden;
       display: -webkit-box;
@@ -64,8 +59,9 @@ promo-item {
       }
     }
 
-    @media (width > 800px) {
-      inline-size: min(15.92vw, 207px);
-    }
+  }
+
+  @media (width > 800px) {
+    inline-size: min(15.92vw, 207px);
   }
 }

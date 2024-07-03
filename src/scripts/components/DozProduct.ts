@@ -56,8 +56,8 @@ export class DozProduct extends HTMLElement {
         <img alt="opakowanie ${product.name}" width="${width}" height="${height}" src="${this.imagesrc}"/>
       </picture>
       <p class="dermodays-description">${product.name}</p>
-      <p class="dermodays-price">Cena: ${product.price}</p>
-      ${product.price_lowest ? `<p class="dermodays-brand">Cena z ostatnich 30 dni: ${product.price_lowest}</p>` : ''}
+      <p class="dermodays-price">${product.price}</p>
+      ${product.price_lowest ? `<p class="dermodays-price">Cena z ostatnich 30 dni: ${product.price_lowest}</p>` : ''}
       <a href="${product.add_to_cart_url}" class="product__add-to-cart-js dermodays-widget" data-add-url="/koszyk/dodaj-produkt" data-id="${product.id}">Dodaj do koszyka</a>
     `;
   }

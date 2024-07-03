@@ -69,6 +69,12 @@
       }
     }
 
+    .price {
+      font-size: var(--f-m);
+      font-weight: bold;
+      color: var(--c-footer-fg-odd);
+    }
+
     .description {
       inline-size: min(204px, 63.75vw);
 
